@@ -34,8 +34,10 @@ def track_downloaded_files(directory_to_track):
 
             if flag:
                 print(f"Файл готов: {flag} путь к файлу: {file_path}")
-                # Дополнительные действия с готовым файлом
-                # Сброс флага после обработки файла
+
+                ##
+                ##
+
                 event_handler.ready_flag = False
                 event_handler.ready_file_path = ""
                 break
@@ -49,6 +51,5 @@ def track_downloaded_files(directory_to_track):
         observer.join()
 
 
-# Пример использования
 directory_to_track = r"c:\Users\dmymrin1995\Downloads"
 track_downloaded_files(directory_to_track)
