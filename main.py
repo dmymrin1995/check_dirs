@@ -32,7 +32,7 @@ def track_downloaded_files(directory_to_track):
         while True:
             flag, file_path = event_handler.is_ready()
 
-            if flag:
+            if flag and file_path.endswith(".pdf"):
                 print(f"Файл готов: {flag} путь к файлу: {file_path}")
 
                 ##
